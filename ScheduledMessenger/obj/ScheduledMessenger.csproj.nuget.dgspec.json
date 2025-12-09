@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\software\\trae\\trae 项目\\1\\scheduledmessenger\\ScheduledMessenger.csproj": {}
+    "E:\\software\\trae\\trae 项目\\1\\ScheduledMessenger\\ScheduledMessenger.csproj": {}
   },
   "projects": {
-    "E:\\software\\trae\\trae 项目\\1\\scheduledmessenger\\ScheduledMessenger.csproj": {
+    "E:\\software\\trae\\trae 项目\\1\\ScheduledMessenger\\ScheduledMessenger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\software\\trae\\trae 项目\\1\\scheduledmessenger\\ScheduledMessenger.csproj",
+        "projectUniqueName": "E:\\software\\trae\\trae 项目\\1\\ScheduledMessenger\\ScheduledMessenger.csproj",
         "projectName": "ScheduledMessenger",
-        "projectPath": "E:\\software\\trae\\trae 项目\\1\\scheduledmessenger\\ScheduledMessenger.csproj",
+        "projectPath": "E:\\software\\trae\\trae 项目\\1\\ScheduledMessenger\\ScheduledMessenger.csproj",
         "packagesPath": "C:\\Users\\zero3\\.nuget\\packages\\",
-        "outputPath": "E:\\software\\trae\\trae 项目\\1\\scheduledmessenger\\obj\\",
+        "outputPath": "E:\\software\\trae\\trae 项目\\1\\ScheduledMessenger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,12 +12,43 @@ public partial class Form1 : Form
     private DateTime sendTime;
 
     public Form1()
-    {
-        InitializeComponent();
-        // 设置默认时间为当前时间加1分钟
-        dateTimePicker1.Value = DateTime.Now.AddMinutes(1);
-        btnStop.Enabled = false;
-    }
+        {
+            InitializeComponent();
+            // 设置默认时间为当前时间加1分钟
+            dateTimePicker1.Value = DateTime.Now.AddMinutes(1);
+            btnStop.Enabled = false;
+            // 添加Load事件处理程序
+            this.Load += new EventHandler(Form1_Load);
+        }
+
+        private void Form1_Load(object? sender, EventArgs e)
+        {
+            txtSmtpPort.Text = "587";
+            // 添加窗口大小调整事件
+            this.Resize += new EventHandler(Form1_Resize);
+            // 初始调整一次大小
+            AdjustMessageTextBoxSize();
+        }
+
+        private void Form1_Resize(object? sender, EventArgs e)
+        {
+            AdjustMessageTextBoxSize();
+        }
+
+        private void AdjustMessageTextBoxSize()
+        {
+            // 计算消息文本框的新高度
+            int buttonHeight = btnStart.Height + btnStop.Height + 20; // 按钮高度加上间距
+            int otherControlsHeight = 371; // 消息文本框之前的所有控件高度
+            int newHeight = this.ClientSize.Height - otherControlsHeight - buttonHeight - 50; // 50是额外的边距
+
+            // 确保最小高度
+            if (newHeight < 120)
+                newHeight = 120;
+
+            // 调整文本框大小
+            txtMessage.Height = newHeight;
+        }
 
     private void btnStart_Click(object sender, EventArgs e)
     {

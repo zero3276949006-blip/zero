@@ -1,0 +1,14 @@
+E:\software\trae\trae 项目\1\ScheduledMessenger\bin\Release\net9.0-windows\ScheduledMessenger.exe
+E:\software\trae\trae 项目\1\ScheduledMessenger\bin\Release\net9.0-windows\ScheduledMessenger.deps.json
+E:\software\trae\trae 项目\1\ScheduledMessenger\bin\Release\net9.0-windows\ScheduledMessenger.runtimeconfig.json
+E:\software\trae\trae 项目\1\ScheduledMessenger\bin\Release\net9.0-windows\ScheduledMessenger.dll
+E:\software\trae\trae 项目\1\ScheduledMessenger\bin\Release\net9.0-windows\ScheduledMessenger.pdb
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.GeneratedMSBuildEditorConfig.editorconfig
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.AssemblyInfoInputs.cache
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.AssemblyInfo.cs
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.csproj.CoreCompileInputs.cache
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.dll
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\refint\ScheduledMessenger.dll
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.pdb
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ScheduledMessenger.genruntimeconfig.cache
+E:\software\trae\trae 项目\1\ScheduledMessenger\obj\Release\net9.0-windows\ref\ScheduledMessenger.dll

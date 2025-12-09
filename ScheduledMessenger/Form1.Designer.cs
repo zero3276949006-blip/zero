@@ -314,8 +314,8 @@ partial class Form1
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(600, 550);
         this.Controls.Add(this.flowLayoutPanel1);
-        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-        this.MaximizeBox = false;
+        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+        this.MaximizeBox = true;
         this.Name = "Form1";
         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         this.Text = "定时邮件发送器";
