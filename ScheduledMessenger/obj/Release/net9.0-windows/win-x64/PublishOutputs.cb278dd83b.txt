@@ -1,0 +1,2 @@
+E:\software\trae\trae 项目\1\scheduledmessenger\bin\Release\net9.0-windows\win-x64\publish_self_containedpublish\ScheduledMessenger.pdb
+E:\software\trae\trae 项目\1\scheduledmessenger\bin\Release\net9.0-windows\win-x64\publish_self_containedpublish\ScheduledMessenger.exe
