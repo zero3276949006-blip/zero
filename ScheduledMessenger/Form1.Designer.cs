@@ -23,7 +23,7 @@ partial class Form1
     private System.Windows.Forms.NotifyIcon notifyIcon1;
     private System.Windows.Forms.Timer timer1;
     private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.TextBox txtSmtpServer;
+    private System.Windows.Forms.ComboBox cmbSmtpServer;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.TextBox txtSmtpPort;
     private System.Windows.Forms.Label label6;
@@ -33,6 +33,9 @@ partial class Form1
     private System.Windows.Forms.Label label8;
     private System.Windows.Forms.TextBox txtSubject;
     private System.Windows.Forms.CheckBox chkEnableSsl;
+    private System.Windows.Forms.Label label9;
+    private System.Windows.Forms.ComboBox cmbRelativeTime;
+    private System.Windows.Forms.FlowLayoutPanel sendTimePanel;
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -54,39 +57,43 @@ partial class Form1
     ///  the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent()
-    {
-        this.components = new System.ComponentModel.Container();
-        this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-        this.label1 = new System.Windows.Forms.Label();
-        this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-        this.label2 = new System.Windows.Forms.Label();
-        this.txtContact = new System.Windows.Forms.TextBox();
-        this.label3 = new System.Windows.Forms.Label();
-        this.txtMessage = new System.Windows.Forms.TextBox();
-        this.label4 = new System.Windows.Forms.Label();
-        this.txtSmtpServer = new System.Windows.Forms.TextBox();
-        this.label5 = new System.Windows.Forms.Label();
-        this.txtSmtpPort = new System.Windows.Forms.TextBox();
-        this.label6 = new System.Windows.Forms.Label();
-        this.txtSenderEmail = new System.Windows.Forms.TextBox();
-        this.label7 = new System.Windows.Forms.Label();
-        this.txtSenderPassword = new System.Windows.Forms.TextBox();
-        this.label8 = new System.Windows.Forms.Label();
-        this.txtSubject = new System.Windows.Forms.TextBox();
-        this.btnStart = new System.Windows.Forms.Button();
-        this.btnStop = new System.Windows.Forms.Button();
-        this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-        this.timer1 = new System.Windows.Forms.Timer(this.components);
-        this.chkEnableSsl = new System.Windows.Forms.CheckBox();
-        this.flowLayoutPanel1.SuspendLayout();
-        this.SuspendLayout();
-        // 
-        // flowLayoutPanel1
-        // 
-        this.flowLayoutPanel1.Controls.Add(this.label1);
-        this.flowLayoutPanel1.Controls.Add(this.dateTimePicker1);
+        {
+            this.components = new System.ComponentModel.Container();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbSmtpServer = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSmtpPort = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSenderEmail = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSenderPassword = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.chkEnableSsl = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbRelativeTime = new System.Windows.Forms.ComboBox();
+            this.sendTimePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.sendTimePanel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.sendTimePanel);
         this.flowLayoutPanel1.Controls.Add(this.label4);
-        this.flowLayoutPanel1.Controls.Add(this.txtSmtpServer);
+        this.flowLayoutPanel1.Controls.Add(this.cmbSmtpServer);
         this.flowLayoutPanel1.Controls.Add(this.label5);
         this.flowLayoutPanel1.Controls.Add(this.txtSmtpPort);
         this.flowLayoutPanel1.Controls.Add(this.chkEnableSsl);
@@ -119,15 +126,58 @@ partial class Form1
         this.label1.Size = new System.Drawing.Size(88, 20);
         this.label1.TabIndex = 0;
         this.label1.Text = "发送时间：";
+            // 
+            // sendTimePanel
+            // 
+            this.sendTimePanel.Controls.Add(this.dateTimePicker1);
+            this.sendTimePanel.Controls.Add(this.label9);
+            this.sendTimePanel.Controls.Add(this.cmbRelativeTime);
+            this.sendTimePanel.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
+            this.sendTimePanel.Location = new System.Drawing.Point(20, 43);
+            this.sendTimePanel.Name = "sendTimePanel";
+            this.sendTimePanel.Size = new System.Drawing.Size(557, 30);
+            this.sendTimePanel.TabIndex = 1;
         // 
         // dateTimePicker1
         // 
         this.dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        this.dateTimePicker1.Location = new System.Drawing.Point(20, 43);
+        this.dateTimePicker1.Location = new System.Drawing.Point(3, 3);
         this.dateTimePicker1.Name = "dateTimePicker1";
         this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-        this.dateTimePicker1.TabIndex = 1;
+        this.dateTimePicker1.TabIndex = 0;
+        // 
+        // label9
+        // 
+        this.label9.AutoSize = true;
+        this.label9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.label9.Location = new System.Drawing.Point(209, 3);
+        this.label9.Name = "label9";
+        this.label9.Size = new System.Drawing.Size(98, 20);
+        this.label9.TabIndex = 1;
+        this.label9.Text = "或相对时间：";
+        // 
+        // cmbRelativeTime
+        // 
+        this.cmbRelativeTime.FormattingEnabled = true;
+        this.cmbRelativeTime.Items.AddRange(new object[] {
+        "选择相对时间",
+        "10秒后",
+        "30秒后",
+        "1分钟后",
+        "5分钟后",
+        "10分钟后",
+        "30分钟后",
+        "1小时后",
+        "2小时后",
+        "5小时后",
+        "1天后"});
+        this.cmbRelativeTime.Location = new System.Drawing.Point(313, 3);
+        this.cmbRelativeTime.Name = "cmbRelativeTime";
+        this.cmbRelativeTime.Size = new System.Drawing.Size(200, 28);
+        this.cmbRelativeTime.TabIndex = 2;
+        this.cmbRelativeTime.Text = "选择相对时间";
+        this.cmbRelativeTime.SelectedIndexChanged += new System.EventHandler(this.cmbRelativeTime_SelectedIndexChanged);
         // 
         // label2
         // 
@@ -143,7 +193,7 @@ partial class Form1
         // 
         this.txtContact.Location = new System.Drawing.Point(20, 291);
         this.txtContact.Name = "txtContact";
-        this.txtContact.PlaceholderText = "请输入收件人邮箱地址";
+        this.txtContact.PlaceholderText = "请输入收件人邮箱地址，多个地址用逗号或分号分隔";
         this.txtContact.Size = new System.Drawing.Size(557, 27);
         this.txtContact.TabIndex = 11;
         // 
@@ -170,20 +220,23 @@ partial class Form1
         // 
         this.label4.AutoSize = true;
         this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.label4.Location = new System.Drawing.Point(20, 73);
+        this.label4.Location = new System.Drawing.Point(20, 126);
         this.label4.Name = "label4";
         this.label4.Size = new System.Drawing.Size(88, 20);
-        this.label4.TabIndex = 2;
+        this.label4.TabIndex = 4;
         this.label4.Text = "SMTP服务器：";
         // 
-        // txtSmtpServer
+        // cmbSmtpServer
         // 
-        this.txtSmtpServer.Location = new System.Drawing.Point(20, 96);
-        this.txtSmtpServer.Name = "txtSmtpServer";
-        this.txtSmtpServer.PlaceholderText = "例如：smtp.qq.com";
-        this.txtSmtpServer.Size = new System.Drawing.Size(557, 27);
-        this.txtSmtpServer.TabIndex = 3;
-        this.txtSmtpServer.Text = "smtp.qq.com";
+        this.cmbSmtpServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbSmtpServer.FormattingEnabled = true;
+        this.cmbSmtpServer.Items.AddRange(new object[] {"请选择", "smtp.qq.com", "smtp.163.com", "smtp.126.com", "smtp.gmail.com", "smtp.office365.com", "smtp.sina.com.cn"});
+        this.cmbSmtpServer.Location = new System.Drawing.Point(20, 149);
+        this.cmbSmtpServer.Name = "cmbSmtpServer";
+        this.cmbSmtpServer.Size = new System.Drawing.Size(557, 28);
+        this.cmbSmtpServer.TabIndex = 5;
+        this.cmbSmtpServer.SelectedIndex = 1; // 默认选择QQ邮箱
+        this.cmbSmtpServer.SelectedIndexChanged += new System.EventHandler(this.cmbSmtpServer_SelectedIndexChanged);
         // 
         // label5
         // 
@@ -230,14 +283,14 @@ partial class Form1
         this.label7.Name = "label7";
         this.label7.Size = new System.Drawing.Size(88, 20);
         this.label7.TabIndex = 12;
-        this.label7.Text = "邮箱密码：";
+        this.label7.Text = "授权码：";
         // 
         // txtSenderPassword
         // 
         this.txtSenderPassword.Location = new System.Drawing.Point(20, 271);
         this.txtSenderPassword.Name = "txtSenderPassword";
         this.txtSenderPassword.PasswordChar = '*';
-        this.txtSenderPassword.PlaceholderText = "请输入邮箱密码（或授权码）";
+        this.txtSenderPassword.PlaceholderText = "请输入邮箱授权码";
         this.txtSenderPassword.Size = new System.Drawing.Size(557, 27);
         this.txtSenderPassword.TabIndex = 13;
         // 
@@ -308,6 +361,37 @@ partial class Form1
         this.chkEnableSsl.Text = "启用SSL";
         this.chkEnableSsl.UseVisualStyleBackColor = true;
         // 
+        // label9
+        // 
+        this.label9.AutoSize = true;
+        this.label9.Location = new System.Drawing.Point(20, 99);
+        this.label9.Name = "label9";
+        this.label9.Size = new System.Drawing.Size(95, 12);
+        this.label9.TabIndex = 3;
+        this.label9.Text = "或相对时间：";
+        // 
+        // cmbRelativeTime
+        // 
+        this.cmbRelativeTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbRelativeTime.FormattingEnabled = true;
+        this.cmbRelativeTime.Items.AddRange(new object[] {
+        "10秒后",
+        "30秒后",
+        "1分钟后",
+        "5分钟后",
+        "10分钟后",
+        "30分钟后",
+        "1小时后",
+        "2小时后",
+        "5小时后",
+        "1天后"});
+        this.cmbRelativeTime.Location = new System.Drawing.Point(20, 114);
+        this.cmbRelativeTime.Name = "cmbRelativeTime";
+        this.cmbRelativeTime.Size = new System.Drawing.Size(208, 20);
+        this.cmbRelativeTime.TabIndex = 4;
+        this.cmbRelativeTime.Text = "选择相对时间";
+        this.cmbRelativeTime.SelectedIndexChanged += new System.EventHandler(this.cmbRelativeTime_SelectedIndexChanged);
+        // 
         // Form1
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -319,11 +403,30 @@ partial class Form1
         this.Name = "Form1";
         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         this.Text = "定时邮件发送器";
+        // 将相对时间控件添加到flowLayoutPanel1中
+        this.flowLayoutPanel1.Controls.Add(this.label9);
+        this.flowLayoutPanel1.Controls.Add(this.cmbRelativeTime);
+        // 添加"发送失败？"链接标签
+        this.linkLabelHelp = new System.Windows.Forms.LinkLabel();
+        this.linkLabelHelp.AutoSize = true;
+        this.linkLabelHelp.Location = new System.Drawing.Point(20, 451);
+        this.linkLabelHelp.Name = "linkLabelHelp";
+        this.linkLabelHelp.Size = new System.Drawing.Size(150, 20);
+        this.linkLabelHelp.TabIndex = 20;
+        this.linkLabelHelp.TabStop = true;
+        this.linkLabelHelp.Text = "发送失败？点击查看解决方案";
+        this.linkLabelHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHelp_LinkClicked);
+        this.flowLayoutPanel1.Controls.Add(this.linkLabelHelp);
+
         this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-        this.flowLayoutPanel1.ResumeLayout(false);
-        this.flowLayoutPanel1.PerformLayout();
-        this.ResumeLayout(false);
+        this.sendTimePanel.ResumeLayout(false);
+            this.sendTimePanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
     }
 
     #endregion
+
+    private System.Windows.Forms.LinkLabel linkLabelHelp;
 }
